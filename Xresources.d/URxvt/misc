@@ -1,0 +1,4 @@
+!  vim: set filetype=xdefaults fdm=marker :
+
+URxvt.scrollBar:		False
+URxvt.cursorBlink:		True

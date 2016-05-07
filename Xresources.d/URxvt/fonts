@@ -1,0 +1,7 @@
+!  vim: set filetype=xdefaults fdm=marker :
+
+!! Bane of my existance: Rendering fonts.
+URxvt.buffered: 		False
+URxvt.skipBuiltinGlyphs:	true
+URxvt.font:			xft:Terminess\ Powerline:antialias=False:size=12
+URxvt.boldFont: 		xft:Terminess\ Powerline:antialias=False:bold:size=12

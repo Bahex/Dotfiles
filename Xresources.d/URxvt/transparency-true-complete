@@ -1,0 +1,10 @@
+!  vim: set filetype=xdefaults fdm=marker :
+
+! Disable fake transparency
+URxvt.inheritPixmap: false
+URxvt.transparent: false
+URxvt.shading: 0
+
+! Transparency
+URxvt.depth: 32
+URxvt.background: [0]#000000
