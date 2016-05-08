@@ -223,7 +223,7 @@ bar {
  for_window [class="^Steam$" title="^Screenshot Uploader$"] floating enable
  
  ## Urxvt Pop Up
- for_window [instance="^URxvtPopUp$"] floating enable
+ for_window [instance="^URxvtPopUp$"] floating enable, border none
  no_focus [instance="^URxvtPopUp$"]
  
  ## Cava
