@@ -266,6 +266,7 @@ bindsym $mod+Shift+a exec i3-input -F 'rename workspace to "%s"' -P 'New name: '
 ## Adding symbols that are not possible to type with a keyboard
 for_window [workspace="^Code$"] rename workspace to \" Code\"
 for_window [workspace="^GitHub$"] rename workspace to \" GitHub\"
+for_window [workspace="^Music$"] rename workspace to \"\"
 for_window [workspace="^Term$"] rename workspace to \"0: \"
 # }}}
 
