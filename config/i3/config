@@ -264,9 +264,9 @@ bindsym $mod+Tab exec rofi -show window
 ## Renaming workspace
 bindsym $mod+Shift+a exec i3-input -F 'rename workspace to "%s"' -P 'New name: '
 ## Adding symbols that are not possible to type with a keyboard
-for_window [workspace="^Music$"] rename workspace to \"0: \"
-for_window [workspace="^Term$"] rename workspace to \"1: \"
-for_window [workspace="^Code$"] rename workspace to \"2:  \"
+for_window [workspace="^Music$"] rename workspace to \"19: \"
+for_window [workspace="^Term$"] rename workspace to \"0: \"
+for_window [workspace="^Code$"] rename workspace to \"18:  \"
 # }}}
 
 # Startup programs that go together witch i3
