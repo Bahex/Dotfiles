@@ -5,4 +5,4 @@ URxvt.buffered: 		False
 URxvt.skipBuiltinGlyphs:	true
 URxvt.font:			xft:Terminess\ Powerline:antialias=False:size=12
 URxvt.boldFont: 		xft:Terminess\ Powerline:antialias=False:bold:size=12
-URxvt.italicFont: 		xft:Corbel:antialias=False:Italic:size=12
+URxvt.italicFont: 		xft:Ubuntu Mono:antialias=False:Italic
