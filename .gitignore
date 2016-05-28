@@ -13,4 +13,5 @@
 !/config/ncmpcpp
 !/config/neofetch
 !/config/ranger
+/config/ranger/bookmarks
 !/config/compton.conf

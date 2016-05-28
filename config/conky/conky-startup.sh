@@ -1,4 +1,4 @@
 killall conky
-cd "/home/bahey/.config/conky"
-conky -c "/home/bahey/.config/conky/basic-clock.conf" &
-conky -c "/home/bahey/.config/conky/rss.conf" &
+cd "${HOME}/.config/conky"
+conky -c "${HOME}/.config/conky/basic-clock.conf" &
+#conky -c "${HOME}/.config/conky/rss.conf" &
