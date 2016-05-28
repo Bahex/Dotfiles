@@ -1,0 +1,27 @@
+#!/bin/bash
+
+FILE="/etc/location"
+
+if [ ! -e $FILE ]; then
+	echo "nowhere" > $FILE
+	chmod a+r $FILE
+fi
+
+case "$ACTION" in
+	"CONNECT")
+		case "${SSID,,}" in
+			bilimmerkez*)
+				echo "BilimMerkezi" > $FILE
+				;;
+			"lazy lizard")
+				echo "Home" > $FILE
+				;;
+			*)
+				echo "nowhere" > $FILE
+				;;
+		esac
+		;;
+	"DISCONNECT")
+		echo "nowhere" > $FILE
+		;;
+esac

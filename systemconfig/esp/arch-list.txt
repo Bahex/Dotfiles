@@ -1,0 +1,4 @@
+/esp/loader/entries/archlinux.conf
+/esp/scripts/bootmgr-archlinux.sh
+/esp/syslinux/syslinux.cfg
+/etc/default/grub

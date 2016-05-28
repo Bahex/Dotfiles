@@ -1,0 +1,16 @@
+#Exclude other/unnecessary config files.
+/config/*
+!/config/cava
+!/config/conky
+!/config/dunst
+!/config/fontconfig
+!/config/htop
+!/config/i3
+!/config/i3status
+!/config/livestreamer
+!/config/mpd/mpd.conf
+!/config/mpv
+!/config/ncmpcpp
+!/config/neofetch
+!/config/ranger
+!/config/compton.conf

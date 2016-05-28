@@ -1,0 +1,45 @@
+#!/bin/sh
+exec tail -n +3 $0
+# This file provides an easy way to add custom menu entries.  Simply type the
+# menu entries you want to add after this comment.  Be careful not to change
+# the 'exec tail' line above.
+
+submenu "Bootable ISOs" {
+
+search --set=root --fs-uuid 3c23b86b-a882-4cd1-86c7-2b1087ba0726
+
+	menuentry "Kali" {
+		set isofile='/isofiles/kali-linux-2016.1-amd64.iso'
+		loopback loop $isofile
+		linux (loop)/live/vmlinuz boot=live findiso=$isofile noconfig=sudo username=root hostname=kali acpi_backlight=vendor 
+		initrd (loop)/live/initrd.img
+	}
+
+	menuentry "Ubuntu MATE" {
+		set isofile='/isofiles/ubuntu-mate-15.10-desktop-amd64.iso'
+		loopback loop $isofile
+		linux (loop)/casper/vmlinuz.efi boot=casper iso-scan/filename=$isofile acpi_backlight=vendor splash --
+		initrd (loop)/casper/initrd.lz
+	}
+
+	menuentry "Elementary OS" {
+		set isofile='/isofiles/elementaryos-0.3.2-stable-amd64.20151209.iso'
+		loopback loop $isofile
+		linux (loop)/casper/vmlinuz boot=casper iso-scan/filename=$isofile acpi_backlight=vendor splash --
+		initrd	(loop)/casper/initrd.lz
+	}
+}
+
+submenu "Power Options" {
+
+	menuentry "Shutdown" {
+		echo "System shutting down..."
+		halt
+	}
+
+	menuentry "Restart" {
+		echo "System rebooting..."
+		reboot
+	}
+
+}

@@ -1,0 +1,8 @@
+#!/bin/sh
+bl=/sys/class/backlight/radeon_bl0/brightness
+step=3
+
+case $1 in
+  -) echo $(( `cat $bl` - $step )) > $bl;;
+  +) echo $(( `cat $bl` + $step )) > $bl;;
+esac

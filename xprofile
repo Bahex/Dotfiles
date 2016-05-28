@@ -1,0 +1,6 @@
+#!/bin/sh
+
+xset r rate 200 25 &
+xrandr --output LVDS --primary &
+setxkbmap -option compose:menu-altgr &
+numlockx off && numlockx on &

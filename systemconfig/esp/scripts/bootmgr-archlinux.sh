@@ -1,0 +1,1 @@
+efibootmgr -g -d /dev/sda -p 1 -C -L "Arch Linux" -l /EFI/archlinux/vmlinuz-linux -u "root=UUID=3c23b86b-a882-4cd1-86c7-2b1087ba0726 rw  resume=UUID=d5ad55d2-ae96-473f-af02-e5bee783d8cb acpi_backlight=native quiet initrd=/EFI/archlinux/intel-ucode.img initrd=/EFI/archlinux/initramfs-linux.img"

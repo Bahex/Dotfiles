@@ -273,7 +273,7 @@ for_window [workspace="^Code$"] rename workspace to \"18:  \"
 #exec --no-startup-id udiskie -aNs2 &
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id compton
-exec --no-startup-id ~/.conky/conky-startup.sh
+exec --no-startup-id ~/.config/conky/conky-startup.sh
 # Started with a script that checks there is no other instance runnig
 # (xss-lock works after closing X too)
 exec --no-startup-id ~/scripts/misc/xss-lock.sh
