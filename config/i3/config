@@ -238,7 +238,7 @@ bar {
 # Additional Key Bindings {{{
  
 ## Alternative terminal.
-bindsym $mod+Shift+Return exec ~/scripts/apps/other-term.sh
+bindsym $mod+Shift+Return exec ~/Git/ScriptsAndCode.git/shellscripts/apps/other-term.sh
 
 ## Lock screen. Works in addition with xss-lock
 bindsym $mod+l exec loginctl lock-session
@@ -246,7 +246,7 @@ bindsym $mod+l exec loginctl lock-session
 bindsym XF86Launch1 exec --no-startup-id xset dpms force off
 
 ## Compton On/Off Button for performance reasons
-bindsym XF86Display exec --no-startup-id ~/scripts/keybinds/compton
+bindsym XF86Display exec --no-startup-id ~/Git/ScriptsAndCode/shellscripts/keybinds/compton
 
 ## Set window transparency/opacity
 bindsym $mod+Shift+o exec i3-input -F 'exec compton-trans -c %s' -P 'Set opacity: '
@@ -276,4 +276,4 @@ exec --no-startup-id compton
 exec --no-startup-id ~/.config/conky/conky-startup.sh
 # Started with a script that checks there is no other instance runnig
 # (xss-lock works after closing X too)
-exec --no-startup-id ~/scripts/misc/xss-lock.sh
+exec --no-startup-id ~/Git/Dotfiles.git/misc/xss-lock.sh
