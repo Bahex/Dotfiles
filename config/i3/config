@@ -273,5 +273,5 @@ for_window [workspace="^Code$"] rename workspace to \"18:  \"
 ##########################################################
 ### Executes everything in ~/.config/startup directory ###
 ##########################################################
-exec --no-startup-id compton
 exec --no-startup-id ~/.config/startup/.starter.sh
+exec --no-startup-id compton

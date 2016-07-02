@@ -4,11 +4,7 @@ sleep 3s
 conkdir=`realpath $0`
 conkdir=${conkdir%/*}
 
-
-conky -c $conkdir/basic-clock.conf -d
+conky -c $conkdir/basic-clock.conf &
 # conky -c $conkdir/xxx -d
 # conky -c $conkdir/xxx -d
 # conky -c $conkdir/xxx -d
-
-
-exit

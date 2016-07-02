@@ -32,3 +32,4 @@
 /config/zsh/.zsh_history
 
 !/config/compton.conf
+/vim/.netrwhist
