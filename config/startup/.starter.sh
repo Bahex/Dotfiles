@@ -1,4 +1,4 @@
-#/bin/sh
+#!/bin/sh
 
 # Get the path of starter script
 sdir=`realpath $0`
