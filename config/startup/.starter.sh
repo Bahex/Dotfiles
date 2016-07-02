@@ -6,6 +6,6 @@ sdir=${sdir%/*}
 
 # Execute every file `ls` returns which means
 # dotfiles (such as this one) won't be executed
-for i in `ls`; do
+for i in `ls $sdir`; do
 	$sdir/$i
 done
