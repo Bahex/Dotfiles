@@ -28,7 +28,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Shift+d exec dmenu_run
 
 # i3-dmenu-desktop only displays applications shipping a .desktop file.
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -dmenu -i -p "Launch: "'
 
 # change focus
 bindsym $mod+Left focus left
@@ -128,9 +128,10 @@ mode "resize" {
 # }}}
 
 # Gaps {{{
-smart_gaps on
+#smart_gaps on
 smart_borders on
 gaps inner 15
+gaps outer 15
 
 set $mode_gaps Gaps: (o)uter, (i)nner
 set $mode_gaps_outer Outer Gaps: ↑|↓|0 (local), Shift + ↑|↓|0 (global)
@@ -153,7 +154,7 @@ mode "$mode_gaps_inner" {
         bindsym Shift+Up	gaps inner all plus 5
         bindsym Shift+Down	gaps inner all minus 5
         bindsym Shift+0		gaps inner all set 0
-        bindsym Shift+KP_0		gaps inner all set 0
+        bindsym Shift+KP_0	gaps inner all set 0
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
@@ -167,7 +168,7 @@ mode "$mode_gaps_outer" {
         bindsym Shift+Up	gaps outer all plus 5
         bindsym Shift+Down	gaps outer all minus 5
         bindsym Shift+0		gaps outer all set 0
-        bindsym Shift+KP_0		gaps outer all set 0
+        bindsym Shift+KP_0	gaps outer all set 0
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
@@ -238,7 +239,7 @@ bar {
 # Additional Key Bindings {{{
  
 ## Alternative terminal.
-bindsym $mod+Shift+Return exec ~/Git/ScriptsAndCode.git/shellscripts/apps/other-term.sh
+bindsym $mod+Shift+Return exec ~/scripts/apps/other-term.sh
 
 ## Lock screen. Works in addition with xss-lock
 bindsym $mod+l exec loginctl lock-session
@@ -246,7 +247,7 @@ bindsym $mod+l exec loginctl lock-session
 bindsym XF86Launch1 exec --no-startup-id xset dpms force off
 
 ## Compton On/Off Button for performance reasons
-bindsym XF86Display exec --no-startup-id ~/Git/ScriptsAndCode/shellscripts/keybinds/compton
+bindsym XF86Display exec --no-startup-id ~/scripts/keybinds/compton
 
 ## Set window transparency/opacity
 bindsym $mod+Shift+o exec i3-input -F 'exec compton-trans -c %s' -P 'Set opacity: '
@@ -269,11 +270,8 @@ for_window [workspace="^Term$"] rename workspace to \"0: \"
 for_window [workspace="^Code$"] rename workspace to \"18:  \"
 # }}}
 
-# Startup programs that go together witch i3
-#exec --no-startup-id udiskie -aNs2 &
-exec --no-startup-id ~/.fehbg
+##########################################################
+### Executes everything in ~/.config/startup directory ###
+##########################################################
 exec --no-startup-id compton
-exec --no-startup-id ~/.config/conky/conky-startup.sh
-# Started with a script that checks there is no other instance runnig
-# (xss-lock works after closing X too)
-exec --no-startup-id ~/Git/Dotfiles.git/misc/xss-lock.sh
+exec --no-startup-id ~/.config/startup/.starter.sh

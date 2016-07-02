@@ -1,11 +1,16 @@
 #!/bin/bash
 
-[ ! "yes-please" == "$1" ] && echo "If you are sure write \"yes-please\" as the first argument." &&exit 1
+[ ! "please" == "$1" ] && echo -e "This script is potentially destructive.\nIf you are sure write \"$0 please\"" && exit 1
 
 INSDIR=$(realpath "$0")
 INSDIR=${INSDIR%/*}
 
-for file in config Xcompose xinitrc xprofile Xresources Xresources.d xserverrc zlogin zshrc; do
-	ln -s ${INSDIR}/${file} ${HOME}/.${file} || echo "$INSDIR olmadı"
+for file in config vim zshenv; do
+	if [ -e ~/.${file} ]; then
+		echo "\"~/.${file}\" already exists. Your copy has been moved to ~/.${file}_"
+		mv ~/.${file} ~/.${file}_
+	fi
+	ln -s ${INSDIR}/${file} ~/.${file}
 done
+
 exit 0

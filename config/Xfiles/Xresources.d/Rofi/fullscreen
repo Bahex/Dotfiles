@@ -1,0 +1,9 @@
+!  vim: set filetype=xdefaults :
+rofi.width:		1366
+rofi.padding:		340
+rofi.location:		0
+rofi.lines:		16
+rofi.bw:		0
+rofi.separator-style:	none
+rofi.hide-scrollbar:	true
+rofi.opacity:		75
