@@ -247,7 +247,7 @@ bindsym $mod+l exec loginctl lock-session
 bindsym XF86Launch1 exec --no-startup-id xset dpms force off
 
 ## Compton On/Off Button for performance reasons
-bindsym XF86Display exec --no-startup-id ~/scripts/keybinds/compton
+bindsym XF86Display exec --no-startup-id ~/scripts/compton
 
 ## Set window transparency/opacity
 bindsym $mod+Shift+o exec i3-input -F 'exec compton-trans -c %s' -P 'Set opacity: '
