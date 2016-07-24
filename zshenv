@@ -1,3 +1,2 @@
 ZDOTDIR="$HOME/.config/zsh"
-XFILES="$HOME/.config/Xfiles"
-export XFILES
+export XFILES="$HOME/.config/Xfiles"

@@ -4,6 +4,7 @@
 # directories/files explicitly.
 /config/*
 !/config/cava
+!/config/compton.conf
 !/config/conky
 !/config/dunst
 !/config/fontconfig
@@ -31,5 +32,4 @@
 /config/zsh/.zdirs
 /config/zsh/.zsh_history
 
-!/config/compton.conf
 /vim/.netrwhist
