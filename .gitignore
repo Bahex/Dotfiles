@@ -29,6 +29,7 @@
 
 !/config/zsh
 /config/zsh/.zcompdump
+/config/zsh/.zcompcache/
 /config/zsh/.zdirs
 /config/zsh/.zsh_history
 /config/zsh/.cache

@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg 	--bg-tile ~/Pictures/wallpapers/Flowery-monochrome-tile-bright.png
+feh --no-fehbg 	--bg-tile ~/Pictures/wallpapers/Flowery-monochrome-tile-dark.png
