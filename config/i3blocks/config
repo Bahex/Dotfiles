@@ -33,6 +33,17 @@ border_left=0
 border_right=2
 border_bottom=1
 
+[mpdbar]
+command=$HOME/scripts/i3blocks/mpd.sh
+color=#ffffdd
+border=#ff9955
+interval=5
+markup=pango
+border_top=2
+border_left=2
+border_right=2
+border_bottom=2
+
 ### Network interface monitoring {{{
 # Name(SSID) of the connected network
 [wireless]
@@ -56,7 +67,7 @@ border=#999999
 # The second parameter overrides the mixer selection
 # See the script for details.
 [volume]
-command=/usr/libexec/i3blocks/volume | sed 's,^MUTE, ,g' | sed 's,%,% ,g' | sed 's,^,  ,g'
+command=$HOME/scripts/i3blocks/volume.sh
 instance=Master
 border=#999999
 interval=once
@@ -71,6 +82,6 @@ markup=pango
 border=#928374
 
 [battery]
-command=$HOME/scripts/battery.sh
+command=$HOME/scripts/i3blocks/battery.sh
 interval=10
 border=#458588
