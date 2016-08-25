@@ -1,0 +1,53 @@
+# — Conky settings — #
+background no
+update_interval 1
+
+double_buffer yes
+no_buffers yes
+
+text_buffer_size 2048
+imlib_cache_size 0
+
+# — Window specifications — #
+
+own_window yes
+own_window_type override
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_argb_visual no
+
+minimum_size 300 100
+
+alignment tr
+
+# — Placement — #
+gap_x 20
+gap_y 40
+
+# — Graphics settings — #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+# — Text settings — #
+use_xft yes
+xftfont droid sans:size=8.5
+xftalpha 1
+
+uppercase no
+
+default_color 696969
+color1 007D7D
+color2 212121
+
+#mpd host\port
+mpd_host localhost
+mpd_port 6600
+
+TEXT
+${image ~/.config/conky/mpd_fancy/case.png}${image ~/.config/conky/mpd_fancy/currentcover.jpg -p 13,13 -s 52x52}
+${voffset 2}${goto 80}${if_mpd_playing}${font droid sans:size=9.5}${mpd_artist}${font}
+${voffset 5}${goto 80}${if_match ${execi 5 expr length "`mpc --format %title% | head -n 1`"} >= 35}${scroll 25 5 ${mpd_title}}${else}${mpd_title}${endif}
+${voffset 14}${goto 19}${color1}${mpd_bar 4,287}${color}${endif}
+${voffset 0}${goto 221}${font droid sans mono:size=8}${mpd_elapsed}${goto 270}${mpd_length}${font}
+${voffset -20}${goto 257}${color1}${font droid sans bold:size=14}/${font}${color}

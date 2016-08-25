@@ -1,0 +1,76 @@
+# i3blocks config file
+# vim:fdm=marker
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# background
+# border
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+command=/usr/libexec/i3blocks/$BLOCK_NAME
+separator=false
+separator_block_width=6
+border_top=0
+border_left=0
+border_right=2
+border_bottom=1
+
+### Network interface monitoring {{{
+# Name(SSID) of the connected network
+[wireless]
+label=   
+command=[[ -z "$(iwgetid -r)" ]] && printf " \n \n#990000" || echo "$(iwgetid -r) "
+interval=2
+border=#999999
+border_right=0
+separator_block_width=0
+
+[iface]
+command=/usr/libexec/i3blocks/iface | while read line; do echo "<i>$line</i> " ; done
+interval=2
+markup=pango
+border=#999999
+# }}}
+
+# Volume indicator
+#
+# The first parameter sets the step (and units to display)
+# The second parameter overrides the mixer selection
+# See the script for details.
+[volume]
+command=/usr/libexec/i3blocks/volume | sed 's,^MUTE, ,g' | sed 's,%,% ,g' | sed 's,^,  ,g'
+instance=Master
+border=#999999
+interval=once
+signal=1
+
+# Date Time
+[time]
+label=
+command=echo "`date '+%Y.%m.%d'` <b>`date '+%H:%M'`</b> "
+interval=10
+markup=pango
+border=#928374
+
+[battery]
+command=$HOME/scripts/battery.sh
+interval=10
+border=#458588

@@ -24,3 +24,6 @@ nmap <leader>p :r! cat /tmp/vitmp<CR>
 set background=dark
 
 set encoding=utf-8
+
+" 4 spaces instead of hardtabs
+set expandtab shiftwidth=4 softtabstop=4

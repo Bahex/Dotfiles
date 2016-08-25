@@ -8,8 +8,8 @@
 !/config/conky
 !/config/dunst
 !/config/fontconfig
-!/config/htop
 !/config/i3
+!/config/i3blocks
 !/config/i3status
 !/config/livestreamer
 !/config/mpd/mpd.conf
