@@ -70,7 +70,7 @@ border=#999999
 command=$HOME/scripts/i3blocks/volume.sh
 instance=Master
 border=#999999
-interval=once
+interval=2
 signal=1
 
 # Date Time
@@ -83,5 +83,5 @@ border=#928374
 
 [battery]
 command=$HOME/scripts/i3blocks/battery.sh
-interval=10
+interval=5
 border=#458588
