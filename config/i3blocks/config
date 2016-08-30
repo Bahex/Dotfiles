@@ -21,7 +21,7 @@
 # signal
 # urgent
 
-# Global properties
+# Global properties {{{
 #
 # The top properties below are applied to every block, but can be overridden.
 # Each block command defaults to the script name to avoid boilerplate.
@@ -32,12 +32,14 @@ border_top=0
 border_left=0
 border_right=2
 border_bottom=1
+# }}}
 
 [mpdbar]
+label=
 command=$HOME/scripts/i3blocks/mpd.sh
 color=#ffffdd
-border=#ff9955
-interval=5
+border=#0099aa
+interval=3
 markup=pango
 border_top=2
 border_left=2
@@ -69,6 +71,7 @@ border=#999999
 [volume]
 command=$HOME/scripts/i3blocks/volume.sh
 instance=Master
+min_width=60
 border=#999999
 interval=2
 signal=1
