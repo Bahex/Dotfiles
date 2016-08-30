@@ -5,6 +5,6 @@ conkdir=`realpath $0`
 conkdir=${conkdir%/*}
 
 conky -c $conkdir/basic-clock.conf &
-# conky -c $conkdir/xxx -d
+conky -c $conkdir/lists.conf &
 # conky -c $conkdir/xxx -d
 # conky -c $conkdir/xxx -d
