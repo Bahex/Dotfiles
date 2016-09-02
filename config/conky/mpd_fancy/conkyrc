@@ -45,7 +45,7 @@ mpd_host localhost
 mpd_port 6600
 
 TEXT
-${image ~/.config/conky/mpd_fancy/case.png}${image ~/.config/conky/mpd_fancy/currentcover.jpg -p 13,13 -s 52x52}
+${image ~/.config/conky/mpd_fancy/case.png}${image /tmp/mpd-track-cover -p 13,13 -s 52x52}
 ${voffset 2}${goto 80}${if_mpd_playing}${font droid sans:size=9.5}${mpd_artist}${font}
 ${voffset 5}${goto 80}${if_match ${execi 5 expr length "`mpc --format %title% | head -n 1`"} >= 35}${scroll 25 5 ${mpd_title}}${else}${mpd_title}${endif}
 ${voffset 14}${goto 19}${color1}${mpd_bar 4,287}${color}${endif}
