@@ -1,2 +1,2 @@
 #!/bin/sh
-synclient HorizTwoFingerScroll=1 PalmDetect=1 CircScrollTrigger=7 VertScrollDelta=25 HorizScrollDelta=25
+synclient VertScrollDelta=25 HorizScrollDelta=25 HorizTwoFingerScroll=1 PalmDetect=1 CircularScrolling=1 CircScrollTrigger=7
