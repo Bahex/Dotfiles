@@ -3,9 +3,9 @@
 Xcursor.theme: Vanilla-DMZ
 
 /* URxvt config {{{*/
-! #include "Xresources.d/URxvt/dark-solar2"
 #include "Xresources.d/URxvt/gruvbox"
-#include "Xresources.d/URxvt/transparency-true"
+URxvt.background:	#003030
+! #include "Xresources.d/URxvt/transparency-true"
 #include "Xresources.d/URxvt/fonts"
 #include "Xresources.d/URxvt/misc"
 /*}}}*/
