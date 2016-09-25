@@ -8,6 +8,8 @@ bindkey -e
 # The following lines were added by compinstall
 zstyle :compinstall filename "$ZDOTDIR/.zshrc"
 
+fpath=($ZDOTDIR/completion $fpath)
+
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
@@ -26,3 +28,6 @@ fi
 
 # Aliases
 alias irssi='/usr/bin/irssi --home=~/.config/irssi --config=~/.config/irssi/config $@'
+
+# Preferences
+tabs 4
