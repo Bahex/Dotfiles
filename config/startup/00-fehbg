@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg 	--bg-tile ~/Pictures/wallpapers/Flowery-monochrome-tile-dark.png
+feh --no-fehbg --bg-scale '/home/bahey/Pictures/wallpapers/space-triangle.jpg' 
