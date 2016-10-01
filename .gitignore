@@ -23,6 +23,7 @@
 /config/ranger/tagged
 
 !/config/startup
+!/config/tmux
 
 !/config/Xfiles
 /config/Xfiles/Xauthority

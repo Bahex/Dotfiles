@@ -18,16 +18,17 @@ autoload -Uz promptinit
 promptinit
 prompt off
 
-if [ ! "$TERM" = "linux" ];then
+if [[ "$TERM" = "linux" || "$TERM" = "screen" ]];then
+	prompt grml
+else
 	precmd() {
 		export PROMPT="$($ZDOTDIR/powerline-zsh.py $?)"
 	}
-else
-	prompt grml
 fi
 
 # Aliases
 alias irssi='/usr/bin/irssi --home=~/.config/irssi --config=~/.config/irssi/config $@'
+alias tmux='/usr/bin/tmux -f $HOME/.config/tmux/tmux.conf'
 
 # Preferences
 tabs 4
