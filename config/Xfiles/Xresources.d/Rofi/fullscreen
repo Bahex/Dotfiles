@@ -6,4 +6,4 @@ rofi.lines:		16
 rofi.bw:		0
 rofi.separator-style:	none
 rofi.hide-scrollbar:	true
-rofi.opacity:		75
+rofi.opacity:		85
