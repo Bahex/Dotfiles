@@ -1,7 +1,7 @@
 use_xft yes
 xftfont 123:size=8
 xftalpha 0.1
-update_interval 1
+update_interval 3
 total_run_times 0
 own_window yes
 own_window_type override
@@ -29,7 +29,7 @@ use_spacer yes
 
 TEXT
 ${voffset 10}${color EAEAEA}${font GE Inspira:pixelsize=120}${time %H:%M}${font}${voffset -84}${offset 10}${color FFA300}${font GE Inspira:pixelsize=42}${time %d} ${voffset -15}${color EAEAEA}${font GE Inspira:pixelsize=22}${time  %B} ${time %Y}${font}${voffset 24}${font GE Inspira:pixelsize=58}${offset -148}${time %A}${font}
-${voffset 1}${offset 12}${font Ubuntu:pixelsize=12}${color FFA300}HD ${offset 9}$color${fs_used /} / ${fs_size /}${offset 30}${color FFA300}RAM ${offset 9}$color$mem / $memmax${offset 30}${color FFA300}CPU ${offset 9}$color${cpu cpu0}%
+${voffset 1}${offset 12}${font Ubuntu:pixelsize=12}${color FFA300}HD ${offset 9}$color${fs_used /} / ${fs_size /}${offset 30}${color FFA300}RAM ${offset 9}$color$mem / $memmax${offset 30}${color FFA300}CPU ${offset 9}$color${cpu cpu0}%${offset 20}${color FFA300}Up for: ${color}${execi 5.0 uptime -p | cut -c 4- | sed 's/, [0-9][0-9] minutes//g'}
 
 
 
