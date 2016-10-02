@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# This script is called from ~/.config/i3/config
+
 # Get the path of starter script
 sdir=`realpath $0`
 sdir=${sdir%/*}
