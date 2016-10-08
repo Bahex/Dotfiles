@@ -356,7 +356,7 @@ progressbar_boldness = yes
 #
 #lines_scrolled = 2
 #
-#follow_now_playing_lyrics = no
+follow_now_playing_lyrics = yes
 #
 #fetch_lyrics_for_current_song_in_background = no
 #

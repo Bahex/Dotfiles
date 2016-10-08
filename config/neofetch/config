@@ -285,7 +285,7 @@ disk_display="off"
 # Image Source
 # --image wall, ascii, /path/to/img, /path/to/dir/, off
 #image="wall"
-image="$HOME/Pictures/blackhole-spaghetti.jpeg"
+image="$HOME/Pictures/wallpapers/space-triangle.jpg"
 
 # Thumbnail directory
 thumbnail_dir="$HOME/.cache/thumbnails/neofetch"
