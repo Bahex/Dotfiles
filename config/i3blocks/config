@@ -25,7 +25,7 @@
 #
 # The top properties below are applied to every block, but can be overridden.
 # Each block command defaults to the script name to avoid boilerplate.
-command=/usr/libexec/i3blocks/$BLOCK_NAME
+command=/usr/lib/i3blocks/$BLOCK_NAME
 separator=false
 separator_block_width=6
 border_top=0
@@ -57,7 +57,7 @@ border_right=0
 separator_block_width=0
 
 [iface]
-command=/usr/libexec/i3blocks/iface | while read line; do echo "<i>$line</i> " ; done
+command=/usr/lib/i3blocks/iface | while read line; do echo "<i>$line</i> " ; done
 interval=2
 markup=pango
 border=#999999
@@ -82,9 +82,9 @@ label=
 command=echo "`date '+%Y.%m.%d'` <b>`date '+%H:%M'`</b> "
 interval=10
 markup=pango
-border=#928374
+border=#999999
 
 [battery]
 command=$HOME/scripts/i3blocks/battery.sh
 interval=5
-border=#458588
+border=#0099aa
