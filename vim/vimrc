@@ -38,6 +38,7 @@ set foldlevel=99
 nnoremap <space> za
 
 set pastetoggle=<F9>
+nmap <F6> :set spell!<CR>
 
 " Easier split control
 nnoremap <C-J> <C-W><C-J>
